@@ -21,7 +21,7 @@ body {
   text-decoration: none;
   color: white;
   font-size: 1.3em;
-  margin-left: 12.5%;
+  margin-left: 15%;
 }
 .navbar .link5 {
   color: white;
@@ -40,8 +40,24 @@ body {
   width: 15%;
   position: absolute;
   right: 0px;
-  top: 10px;
+  top: 4px;
   padding-top: 3.3px;
+}
+
+.logout-btn{
+  border: none;
+  background-color: white;
+  color: black;
+  font-size: 1.25em;
+  text-align: center;
+  border: 2.5px solid rgb(133, 129, 129);
+  border-radius: 7px;
+  padding-bottom: 5px;
+}
+
+.logout-btn:hover{
+  background-color: black;
+  color: white;
 }
 
 .cart-logo {
@@ -92,6 +108,10 @@ body {
   margin-left: 10px;
 }
 
+.detailsDesc-div{
+  width: 100%;
+}
+
 .detailsDesc {
   font-weight: 600;
   font-size: 1.2em;
@@ -114,15 +134,11 @@ body {
   margin-right: 70px;
 }
 
-.sizeSelect tr,
-.sizeSelect td {
+.sizeSelect{
   border: solid 2px black;
-  margin: auto;
-  text-align: center;
-  font-size: 1.3em;
-  font-weight: 500;
-  width: 40px;
-  height: 30px;
+  width: 50px;
+  height: 40px;
+  border-radius: 5px;
 }
 
 .qtySelect tr,
@@ -139,9 +155,23 @@ body {
   width: 60px;
 }
 
+.qty-btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.qty-btn:hover{
+  background-color: rgb(202, 197, 197) !important;
+}
+
+.qty-btn:active{
+  background-color: rgb(175, 166, 166) !important;
+}
+
 .orderButton {
   margin: 0;
-  width: 125px;
+  width: 150px;
   height: 40px;
   margin-top: 30px;
   background-color: #070707;
@@ -444,6 +474,10 @@ button.carousel-btn:active:before {
   color: whitesmoke;
 }
 
+.item-title{
+  width: 100px;
+}
+
 .cart-item-sum{
   display: flex;
 }
@@ -453,7 +487,7 @@ button.carousel-btn:active:before {
   width: auto;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 15px;
 }
 
 .item-1 img{
@@ -462,18 +496,34 @@ button.carousel-btn:active:before {
   float: left;
 }
 
+
 .item-1 > div{
   margin:60px ;
   margin-top:90px;
+  margin-right: 40px;
   line-height: 15px;
 }
+
+.cart-delete{
+  width:70px;
+  height: 70px;
+}
+ 
+.cart-delete:hover{
+  background-color: thistle;
+  border-radius: 50px;
+}
+
 
 .cart-sum{
   width: 40%;
   margin-left: 10px;
+  margin-top: 15px;
   border-radius: 4px;
-  border: solid 2px rgb(190, 182, 182);
+  border: solid 2px rgb(199, 194, 194);
   padding-left: 10px;
+  padding-top: 15px;
+  height:350px;
 
 }
 .cart-sum > div{
@@ -498,3 +548,11 @@ button.carousel-btn:active:before {
   background-color: whitesmoke;
   color: #070707;
 }
+
+/* success Page */
+
+.success-div{
+  text-align: center;
+}
+
+

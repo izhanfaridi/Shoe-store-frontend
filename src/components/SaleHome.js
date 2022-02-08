@@ -71,7 +71,7 @@ function SaleHome() {
             {Object.entries(shoes).map(([productId,{title,img,desc,price,discountPrice}]) => 
               (
                 
-                <Link className="productLink" to={productId}>
+                <Link className="productLink" to={productId} key={productId}>
                   <Card className="card" style={cardStyle} sx={{ maxWidth: 345 }} key={productId}>
                   <CardMedia
                     component="img"

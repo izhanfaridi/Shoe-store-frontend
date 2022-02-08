@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./components/Home";
 import Products from "./components/Products";
 import Header from "./components/Header";
@@ -15,8 +15,9 @@ import SaleHome from "./components/SaleHome";
 import Footer from './components/Footer'
 import Login from "./components/Login";
 import Register from "./components/Register";
-import Cart from "./components/Cart";
 import CartHome from "./components/CartHome";
+import Success from "./components/Success";
+import { useSelector } from "react-redux";
 
 function NotFound() {
   return <div>Not Found</div>;
@@ -25,12 +26,14 @@ function NotFound() {
 
 
 function App() {
+  const user = useSelector((state)=>state.user.currentUser);
   return (
     <div>
       <Header></Header>
       
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="success" element={<Success />}></Route>
         <Route path="products" element={<Products />}>
           <Route path="/products/" element={<ProductHome />}></Route>
           <Route path=":productId" element={<ProductDetails />}></Route>
@@ -51,10 +54,9 @@ function App() {
           <Route path="/sale/" element={<SaleHome />}></Route>
           <Route path=":productId" element={<ProductDetails />}></Route>
         </Route>
-        <Route path="cart" element={<CartHome />}>
-        </Route>
-        <Route path="login" element={<Login />}></Route>
-        <Route path="/login/register" element={<Register />}></Route>
+        <Route path="cart" element={<CartHome />}></Route>
+        <Route path="login" element={user ? <Navigate replace to="/" /> : <Login /> }></Route>
+        <Route path="/login/register" element={user ? <Navigate replace to="/" /> : <Register /> } ></Route>
 
         
 
